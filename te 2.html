@@ -1,0 +1,1574 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Family Tree</title>
+
+
+<style>
+
+body{
+    margin:0;
+    padding:20px;
+    font-family:Arial,sans-serif;
+    background:#f2f4f7;
+    text-align:center;
+}
+
+
+h1{
+    color:#333;
+}
+
+
+.person{
+
+    background:white;
+    padding:10px;
+    border-radius:15px;
+    box-shadow:0 3px 10px #bbb;
+    cursor:pointer;
+
+}
+
+
+
+.person img{
+
+    width:90px;
+    height:90px;
+    border-radius:50%;
+    object-fit:cover;
+    border:3px solid #444;
+
+}
+
+
+
+.small img{
+
+    width:70px;
+    height:70px;
+
+}
+
+
+
+.name{
+
+    font-weight:bold;
+    margin-top:8px;
+
+}
+
+
+
+.hidden{
+
+    display:none;
+
+}
+
+
+
+
+.parents{
+
+    display:flex;
+    justify-content:center;
+    gap:80px;
+    margin:30px 0 60px;
+
+}
+
+
+
+
+.sons{
+
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    gap:25px;
+    flex-wrap:wrap;
+
+}
+
+
+
+.family{
+
+    background:white;
+    padding:15px;
+    border-radius:15px;
+    box-shadow:0 3px 10px #ccc;
+
+}
+
+
+
+
+.couple{
+
+    display:flex;
+    gap:10px;
+    justify-content:center;
+
+}
+
+
+
+
+
+.children{
+
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+    margin-top:30px;
+
+}
+
+
+
+.gfamily{
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+}
+
+
+
+
+.line{
+
+    width:2px;
+    height:25px;
+    background:#555;
+    margin:10px auto;
+
+}
+
+
+
+@media(max-width:900px){
+
+.sons{
+
+flex-direction:column;
+align-items:center;
+
+}
+
+}
+
+
+
+</style>
+
+
+</head>
+
+
+
+<body>
+
+
+
+<h1>purshotam bhai Family Tree</h1>
+
+
+
+
+
+<!-- FATHER MOTHER -->
+
+
+<div class="parents">
+
+
+<div class="person">
+
+
+<img src="0.png" alt="My Photo">
+
+<div class="name">
+purshotam bhai
+</div>
+
+</div>
+
+
+
+
+<div class="person">
+
+<img src="0.5.png" alt="My Photo">
+
+<div class="name">
+Putli Ben
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+<div class="sons">
+
+    <!-- ================= SON 1 ================= -->
+
+
+<div class="family">
+
+
+
+<div class="couple">
+
+
+<div class="person"
+onclick="toggle('son3')">
+
+
+<img src="1.png">
+
+<div class="name">
+Vim Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person">
+
+<img src="2.png">
+
+<div class="name">
+Himat Bhai
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SON 3 CHILDREN -->
+
+
+<div id="son3" class="children hidden">
+
+
+
+
+
+
+
+<!-- G SON 1 + WIFE + D SON -->
+
+
+<div class="gfamily">
+
+
+
+<div class="couple">
+
+
+
+<div class="person small"
+onclick="toggle('s3g1')">
+
+
+<img src="s1.png">
+
+<div class="name">
+Payal Ben
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="person small">
+
+<img src="s2.png">
+
+<div class="name">
+ Bhavesh Bhai
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div id="s3g1" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+    
+
+
+<img src="ss1.png">
+
+<div class="name">
+Nilkanth
+</div>
+
+
+</div>
+
+<div class="person small">
+    
+
+
+<img src="ss2.png">
+
+<div class="name">
+Divy
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- G SON 2 -->
+
+
+<div class="gfamily">
+
+
+
+<div class="couple">
+
+
+
+<div class="person small"
+onclick="toggle('s3g2')"">
+
+
+<img src="s3.png">
+
+<div class="name">
+Rajni Ben
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="person small">
+
+<img src="s4.png">
+
+<div class="name">
+Kiran Bhai
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+<div id="s3g2" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+    
+
+
+<img src="ss3.png">
+
+<div class="name">
+Feni
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="person small">
+    
+
+
+<img src="ss4.png">
+
+<div class="name">
+Dhyan
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- G SON 3 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s3g3')"">
+
+<img src="s5.png">
+
+<div class="name">
+Nilam Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s6.png">
+
+<div class="name">
+Harsh Bhai
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div id="s3g3" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+    
+
+
+<img src="ss5.png">
+
+<div class="name">
+Hritwa
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+<div class="person small">
+    
+
+
+<img src="ss6.png">
+
+<div class="name">
+Adwit
+</div>
+
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- G SON 4 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s3g4')">
+
+<img src="s7.png">
+
+<div class="name">
+Rajen Bhai
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s8.png">
+
+<div class="name">
+Riddhi Ben
+</div>
+
+
+</div>
+
+
+
+</div>
+
+<div id="s3g4" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+    
+
+
+<img src="ss7.png">
+
+<div class="name">
+Anvi
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- G SON 5 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s3g5')">
+
+<img src="s9.png">
+
+<div class="name">
+Mital Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s10.png">
+
+<div class="name">
+Mithilesh Bhai
+</div>
+
+
+</div>
+
+
+
+</div>
+<div id="s3g5" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+    
+
+
+<img src="ss8.png">
+
+<div class="name">
+Prithvi
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- ================= SON 3 ================= -->
+
+
+<div class="family">
+
+
+
+<div class="couple">
+
+
+<div class="person"
+onclick="toggle('son1')">
+
+
+<img src="3.png">
+
+<div class="name">
+Vinu Bhai
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="person">
+
+<img src="4.png">
+
+<div class="name">
+Usha Ben
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SON 1 CHILDREN -->
+
+
+<div id="son1" class="children hidden">
+
+
+
+
+
+
+
+<!-- G SON 1 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s1g1')">
+
+
+<img src="s11.png">
+
+<div class="name">
+Vasnti Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s12.png">
+
+<div class="name">
+Sandeep Bha
+</div>
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+<div id="s1g1" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+
+<img src="ss9.png">
+
+<div class="name">
+    Shiv
+
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+<!-- G SON 2 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s1g2')">
+
+
+<img src="s13.png">
+
+<div class="name">
+Jignesh Bhai
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s14.png">
+
+<div class="name">
+Vaishali Ben
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="s1g2" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+
+<img src="ss10.png">
+
+<div class="name">
+Nidhiksh
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- G SON 3 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s1g3')">
+
+
+<img src="s15.png">
+
+<div class="name">
+Aanal Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s16.png">
+
+<div class="name">
+Harshit Bhai
+</div>
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<div id="s1g3" class="hidden">
+
+
+<div class="line"></div>
+
+
+<div class="person small">
+
+<img src="ss11.png">
+
+<div class="name">
+Parshiv
+</div>
+
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= SON 4 ================= -->
+
+
+<div class="family">
+
+
+<div class="couple">
+
+
+
+<div class="person"
+onclick="toggle('son4')">
+
+
+<img src="5.png">
+
+<div class="name">
+Sumita Ben
+</div>
+
+
+</div>
+
+
+
+
+<div class="person">
+
+<img src="6.jpg">
+
+<div class="name">
+Jeram Bhai 
+</div>
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<!-- SON 4 CHILDREN -->
+
+
+<div id="son4" class="children hidden">
+
+
+
+
+
+
+<!-- G SON 1 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small">
+
+<img src="s17.png">
+
+<div class="name">
+Amit Bhai
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s18.png">
+
+<div class="name">
+Trusha Ben 
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- G SON 2 -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small">
+
+<img src="s19.png">
+
+<div class="name">
+Vivek Bhai
+</div>
+
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s20.png">
+
+<div class="name">
+Kajal Ben
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- ================= SON 5 ================= -->
+
+
+<div class="family">
+
+
+
+<div class="couple">
+
+
+
+<div class="person"
+onclick="toggle('son5')">
+
+
+<img src="7.png">
+
+<div class="name">
+Bhavana Ben 
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="person">
+
+<img src="8.png">
+
+<div class="name">
+Suresh Bhai
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- SON 5 CHILDREN -->
+
+
+<div id="son5" class="children hidden">
+
+
+
+
+
+
+
+<!-- G SON 1 + WIFE + D SON -->
+
+
+<div class="gfamily">
+
+
+<div class="couple">
+
+
+<div class="person small"
+onclick="toggle('s5g1')">
+
+
+<img src="s21.png">
+
+<div class="name">
+Nishant Bhai
+</div>
+
+
+</div>
+
+
+
+
+
+<div class="person small">
+
+<img src="s22.png">
+
+<div class="name">
+Dhvanika Ben
+</div>
+
+
+</div>
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+<div id="s5g1" class="hidden">
+
+
+<div class="line"></div>
+
+
+
+<div class="person small">
+
+
+<img src="ss12.png">
+
+
+<div class="name">
+Pranvi
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- G SON 2 -->
+
+
+<div class="person small">
+
+
+<img src="s23.png">
+
+
+<div class="name">
+Drashti
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+<!-- G SON 3 -->
+
+
+<div class="person small">
+
+
+<img src="s24.png">
+
+<div class="name">
+Raj
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+</div>
+
+
+
+
+
+<!-- ================= SON 2 ================= -->
+
+
+<div class="family">
+
+
+<div class="couple">
+
+
+
+<div class="person"
+onclick="toggle('son2')">
+
+
+<img src="9.png">
+
+<div class="name">
+Ashavin Bhai 
+</div>
+
+
+</div>
+
+
+
+
+<div class="person">
+
+<img src="10.png">
+
+<div class="name">
+Anita Ben
+</div>
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+<!-- SON 2 CHILDREN -->
+
+
+<div id="son2" class="children hidden">
+
+
+
+<div class="person small">
+
+<img src="s25.png">
+
+<div class="name">
+Hetvi
+</div>
+
+</div>
+
+
+
+<div class="person small">
+
+<img src="s26.png">
+
+<div class="name">
+Krisha
+</div>
+
+</div>
+
+
+
+
+<div class="person small">
+
+<img src="s27.png">
+
+<div class="name">
+Kirtan
+</div>
+
+</div>
+
+
+
+</div>
+
+
+</div>
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+
+
+function toggle(id){
+
+
+var element = document.getElementById(id);
+
+
+if(element.classList.contains("hidden")){
+
+
+element.classList.remove("hidden");
+
+
+}
+
+else{
+
+
+element.classList.add("hidden");
+
+
+}
+
+
+}
+
+
+
+</script>
+
+
+
+
+</body>
+
+</html>
